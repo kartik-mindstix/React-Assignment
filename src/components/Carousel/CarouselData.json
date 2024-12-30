@@ -1,0 +1,16 @@
+{
+    "slides": [
+      {
+        "src": "https://as2.ftcdn.net/v2/jpg/06/00/62/29/1000_F_600622958_qHd6apf685EV5vLguPsrQ1ZxzsAQfzPb.jpg",
+        "alt": "Image 1 for carousel"
+      },
+      {
+        "src": "https://as2.ftcdn.net/v2/jpg/10/16/31/57/1000_F_1016315745_x5QFOCIROhFFQYeG6qb8xB4sM2xyYMDc.jpg",
+        "alt": "Image 2 for carousel"
+      },
+      {
+        "src": "https://as1.ftcdn.net/v2/jpg/07/95/01/84/1000_F_795018435_5nkOllwtJP9xDYxoIlYq8AwF2NwKmgea.jpg",
+        "alt": "Image 3 for carousel"
+      }
+    ]
+  }

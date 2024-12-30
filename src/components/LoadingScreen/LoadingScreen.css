@@ -1,0 +1,53 @@
+/* AnimatedLoading.css */
+.animated-loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f7f7f7, #ffffff, #eaeaea);
+    color: #333; /* Neutral text color for readability */
+    font-family: Arial, sans-serif;
+}
+
+.loader svg {
+    animation: rotate 2s linear infinite;
+    width: 80px;
+    height: 80px;
+}
+
+.loader circle {
+    stroke: black;
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: -10;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -40px;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -120px;
+    }
+}
+
+.animated-loading-container p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
