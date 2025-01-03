@@ -37,21 +37,24 @@ const ProductCard = ({ products }) => {
 		);
 	};
 
+	const truncateText = (text, maxLength) => {
+		return text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
+	};
+
 	return (
 		<div className="mainContainer">
 			{products.map((product) => (
 				<div
 					key={product.id}
 					className="box"
-					
 				>
 					<div className="card">
 						<div className="image">
-							<img src={product.image} alt="product" onClick={() => navigate(`/product/${product.id}`)}/>
+							<img src={product.image} alt="product" onClick={() => navigate(`/product/${product.id}`)} />
 						</div>
 						<div className="desc">
 							<h1>{product.title}</h1>
-							<p>{product.description}</p>
+							<p>{truncateText(product.description, 100)}</p>
 							<span>${product.price}</span>
 						</div>
 						<div className="stars">{renderStars(product.rating.rate)}</div>

@@ -1,66 +1,117 @@
 .carousel {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90vw; /* Full viewport width */
-    height: 75vh; /* Full viewport height */
-    overflow: hidden; /* Prevent overflow of images */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw; 
+  height: 75vh; 
+  overflow: hidden; 
+  max-width: 1200px; 
+  margin: auto; 
+}
+
+.slide {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 7px #666;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  filter: drop-shadow(0px 0px 5px #555);
+  width: 3rem; 
+  height: 3rem;
+  color: white;
+  z-index: 10; 
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
+}
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 2rem; 
+  z-index: 10; 
+}
+
+.indicator {
+  background-color: white;
+  height: 0.8rem; 
+  width: 0.8rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px #555;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+.indicator-inactive {
+  background-color: grey;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 60vh;
+    width: 95vw; 
   }
-  
-  .slide {
-    border-radius: 0.5rem;
-    box-shadow: 0px 0px 7px #666;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image fills container while maintaining aspect ratio */
-  }
-  
-  .slide-hidden {
-    display: none;
-  }
-  
+
   .arrow {
-    position: absolute;
-    filter: drop-shadow(0px 0px 5px #555);
-    width: 3rem; /* Larger arrow size for full-screen carousel */
-    height: 3rem;
-    color: white;
-    z-index: 10; /* Ensure arrows are above images */
+    width: 2.5rem; 
+    height: 2.5rem;
   }
-  
-  .arrow:hover {
-    cursor: pointer;
-  }
-  
-  .arrow-left {
-    left: 1rem;
-  }
-  
-  .arrow-right {
-    right: 1rem;
-  }
-  
+
   .indicators {
-    display: flex;
-    position: absolute;
-    bottom: 2rem; /* Adjust for full-screen */
-    z-index: 10; /* Ensure indicators are above images */
+    bottom: 1.5rem; 
   }
-  
+
   .indicator {
-    background-color: white;
-    height: 0.8rem; /* Larger indicators for better visibility */
-    width: 0.8rem;
-    border-radius: 100%;
-    border: none;
-    outline: none;
-    box-shadow: 0px 0px 5px #555;
-    margin: 0 0.3rem;
-    cursor: pointer;
+    height: 0.6rem; 
+    width: 0.6rem;
   }
-  
-  .indicator-inactive {
-    background-color: grey;
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 50vh; 
+    width: 85vw;
   }
-  
+
+  .arrow {
+    width: 2rem; 
+    height: 2rem;
+  }
+
+  .arrow-left {
+    left: 0.5rem; 
+  }
+
+  .arrow-right {
+    right: 0.5rem; 
+  }
+
+  .indicators {
+    bottom: 1rem; 
+  }
+
+  .indicator {
+    height: 0.5rem; 
+    width: 0.5rem;
+  }
+}

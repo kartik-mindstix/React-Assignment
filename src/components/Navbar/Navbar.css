@@ -9,11 +9,10 @@
     font-family: Arial, sans-serif;
   }
   
-  /* Logo Section */
   .navbar-left {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
   }
   
   .logo {
@@ -28,7 +27,6 @@
     text-transform: uppercase;
   }
   
-  /* Navigation Links */
   .nav-link {
     text-decoration: none;
     font-size: 1rem;
@@ -40,7 +38,6 @@
     color: #007bff;
   }
   
-  /* Search Bar Section */
   .navbar-right {
     display: flex;
     align-items: center;
@@ -50,9 +47,9 @@
   .search-bar {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    padding: 0.3rem 0.8rem;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 0.4rem 0.9rem;
     background-color: #f8f9fa;
   }
   
@@ -71,7 +68,6 @@
     cursor: pointer;
   }
   
-  /* Cart Icon Section */
   .cart-icon-container {
     position: relative;
     font-size: 1.5rem;
