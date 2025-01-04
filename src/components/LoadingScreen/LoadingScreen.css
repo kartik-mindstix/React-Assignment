@@ -1,19 +1,24 @@
-/* AnimatedLoading.css */
 .animated-loading-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 1rem;
     background: linear-gradient(135deg, #f7f7f7, #ffffff, #eaeaea);
-    color: #333; /* Neutral text color for readability */
+    color: #333;
     font-family: Arial, sans-serif;
+    text-align: center; 
 }
 
 .loader svg {
     animation: rotate 2s linear infinite;
-    width: 80px;
-    height: 80px;
+    width: 15vw;
+    height: 15vw; 
+    max-width: 100px; 
+    max-height: 100px; 
+    min-width: 50px; 
+    min-height: 50px; 
 }
 
 .loader circle {
@@ -47,7 +52,29 @@
 
 .animated-loading-container p {
     margin-top: 15px;
-    font-size: 1.2rem;
+    font-size: 1.2rem; 
     letter-spacing: 1px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .animated-loading-container p {
+        font-size: 1rem; 
+    }
+
+    .loader svg {
+        width: 20vw;
+        height: 20vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .animated-loading-container p {
+        font-size: 0.9rem; 
+    }
+
+    .loader svg {
+        width: 20vw; 
+        height: 25vw;
+    }
 }
