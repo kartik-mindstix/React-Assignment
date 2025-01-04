@@ -29,6 +29,7 @@ const cartSlice = createSlice({
         state.totalCost += product.price; 
       },
       removeFromCart(state, action) {
+        const productId = action.payload
         const existingProduct = state.products.find(item => item.id === productId);
       
         if (existingProduct) {

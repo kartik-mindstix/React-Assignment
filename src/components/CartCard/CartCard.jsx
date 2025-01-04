@@ -17,30 +17,36 @@ const CartCard = ({ products }) => {
         return Math.ceil(number * multiplier) / multiplier;
       }
 
-	return (
-		<div className="cartContainer">
-			{products.map((product) => (
-				<div key={product.id} className="productBox">
-					<div className="cartProductImage">
-						<img src={product.image} alt="product image"></img>
-					</div>
-					<div className="productInfo">
-						<h2 className="productName">{product.title}</h2>
-						<p className="totalPrice">${roundUp(product.totalPrice)}</p>
-					</div>
-					<div className="quantityButtons">
-						<button className="addButton" onClick={() => handleAddProduct(product)}>
-							+
-						</button>
-						<p className="productQuantity">{product.quantity}</p>
-						<button className="removeButton" onClick={() => handleRemoveProduct(product.id)}>
-							-
-						</button>
-					</div>
-				</div>
-			))}
-		</div>
-	);
+  return (
+    <div className="cartContainer">
+      {products.map((product) => (
+        <div key={product.id} className="productCard">
+          <div className="productImage">
+            <img src={product.image} alt="product" />
+          </div>
+          <div className="productDetails">
+            <h2 className="productTitle">{product.title}</h2>
+            <p className="productPrice">€ {roundUp(product.totalPrice)}</p>
+          </div>
+          <div className="productActions">
+            <button className="removeButton" onClick={() => handleRemoveProduct(product.id)}>
+              Remove
+            </button>
+            <div className="quantityControls">
+              <button className="decreaseButton" onClick={() => handleRemoveProduct(product.id)}>
+                -
+              </button>
+              <p className="quantity">{product.quantity}</p>
+              <button className="increaseButton" onClick={() => handleAddProduct(product)}>
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default CartCard;
+
