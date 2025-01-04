@@ -1,0 +1,28 @@
+
+  .category-headline {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+    margin: 20px 10px; 
+    padding: 10px 0;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  @media (max-width: 768px) {  
+    .category-headline {
+      font-size: 24px; 
+      margin: 15px 5px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cateogry-headline {
+      font-size: 20px; 
+      margin: 10px 5px; 
+      letter-spacing: 0.5px; 
+    }
+  }
+  
