@@ -5,6 +5,7 @@
     padding: 20px;
     background-color: #f9f9f9;
     color: #333;
+    margin: 6rem auto;
 }
 
 .image-section {
@@ -137,6 +138,7 @@
     .product-description-container {
         grid-template-columns: 1fr;
         padding: 10px;
+        margin: 3rem auto;
     }
 
     .image-section img {

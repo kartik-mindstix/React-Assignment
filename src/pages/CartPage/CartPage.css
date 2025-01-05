@@ -1,11 +1,10 @@
-/* Cart Page Container */
 .cartPageContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     width: 90%;
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 6rem auto;
   }
   
   /* Cart Section */
@@ -177,3 +176,10 @@
     color: #fff; /* White text on hover */
   }
   
+
+  @media (max-width: 480px) {
+    .cartPageContainer {
+      margin: 3rem auto;
+    }
+  
+  }

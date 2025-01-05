@@ -9,6 +9,9 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.category-listing-page{
+  margin: 6rem auto;
+}
 
 .dropdown-container {
   position: relative;
@@ -116,5 +119,9 @@
 
   .product-list {
       gap: 10px;
+  }
+
+  .category-listing-page{
+    margin: 3rem auto;
   }
 }
